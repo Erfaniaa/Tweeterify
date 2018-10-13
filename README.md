@@ -1,5 +1,6 @@
 # Tweeterify
 A Twitter bot which recommends some Spotify top charts songs to people.
+
 (It searches whole Twitter for new tweets containing some special sentences.)
 
 ## Screenshots
