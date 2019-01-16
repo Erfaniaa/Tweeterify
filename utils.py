@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# from wit import Wit
 from credentials import *
 import re
 from random import randint
