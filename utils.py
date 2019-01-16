@@ -4,22 +4,6 @@ import re
 from random import randint
 reply_texts = ["Let's listen to this song: ", "Let's play this: ", "Check out this song on Spotify: ", "I recommend this to you: ", "You can listen this song: ", "I suggest this song to you: "]
 
-def get_reply_text(tweet_text):
-	try:
-		response = wit_client.message(tweet_text)
-		if not 'not_important' in response['entities']:
-			return None
-		if len(tweet_text) > 80:
-			return None
-		confidence = response['entities']['not_important'][0]['confidence']
-		print(tweet_text)
-		print(confidence)
-		if confidence > 0.9:
-			return reply_texts[0]
-		return None
-	except:
-		return None
-
 def remove_retweet_prefix(tweet_text):
 	regex_string = r"RT @(.+?): (.+)"
 	r = re.search(regex_string, tweet_text)
