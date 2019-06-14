@@ -2,7 +2,7 @@
 from credentials import *
 import re
 from random import randint
-reply_texts = ["Let's listen to this song: ", "Let's play this: ", "Check out this song on Spotify: ", "I recommend this to you: ", "You can listen this song: ", "I suggest this song to you: "]
+reply_texts = ["Let's listen to this song: ", "Let's play this: ", "Check out this song on Spotify: ", "I recommend this to you: ", "You can listen to this song: ", "I suggest this song to you: "]
 
 def remove_retweet_prefix(tweet_text):
 	regex_string = r"RT @(.+?): (.+)"
